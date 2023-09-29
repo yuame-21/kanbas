@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grades Screen</title>
+</head>
+<body>
+<h1>Grades</h1>
+
+
+<table>
+    <tr>
+        <td valign="top">
+            <ul>
+                <li><a href="nav2.html">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="nav.html">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </td>
+        <td valign="top">
+            <ul>
+                <li><a href="/public/kanbas/home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="/public/kanbas/assignments/index.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </td>
+
+        <!-- Grade book -->
+        <td valign="top">
+            <select>
+                <option>Gradebook</option>
+            </select>
+            <button>Import</button>
+            <select>
+                <option>Export</option>
+            </select>
+            <button>Configure</button>
+            <!-- Input -->
+            <h2>Student Names</h2>
+            <input type="text" id="studentNames" placeholder="Search Students">
+            <h2>Assignment Names</h2>
+            <input type="text" id="assignmentNames" placeholder="Search Assignments">
+            </br>
+            </br>
+
+            <button>Apply Filters</button>
+            </br>
+            </br>
+            <!-- Grade table -->
+            <table border="1" width="100%">
+                <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>A1 SETUP
+                        <div> Out of 100</div>
+                    </th>
+                    <th>A2 HTML
+                        <div>Out of 100</div>
+                    </th>
+                    <th>A3 CSS
+                        <div>Out of 100</div>
+                    </th>
+                    <th>A4 BOOTSTRAP
+                        <div>Out of 100</div>
+                    </th>
+                    <th>A5 JAVASCRIPT
+                        <div>Out of 100</div>
+                    </th>
+                    <th>A6 REACT
+                        <div>Out of 100</div>
+                    </th>
+                    <th>A7 REDUX
+                        <div>Out of 100</div>
+                    </th>
+                    <th>A8 NODE
+                        <div>Out of 100</div>
+                    </th>
+                    <th>A9 MONGO
+                        <div>Out of 100</div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Alice Wonderland</td>
+                    <td>100</td>
+                    <td>99</td>
+                    <td><input type="number" placeholder="0" value="88"></td>
+                    <td>97</td>
+                    <td>96</td>
+                    <td>95</td>
+                    <td>94</td>
+                    <td>93</td>
+                    <td>92</td>
+                </tr>
+                <tr>
+                    <td>Claire Flea</td>
+                    <td>100</td>
+                    <td>99</td>
+                    <td>98</td>
+                    <td>97</td>
+                    <td>96</td>
+                    <td><input type="number" placeholder="0" value="85"></td>
+                    <td>94</td>
+                    <td>93</td>
+                    <td>92</td>
+                </tr>
+                <tr>
+                    <td>Sandra O</td>
+                    <td>100</td>
+                    <td>99</td>
+                    <td>98</td>
+                    <td>97</td>
+                    <td><input type="number" placeholder="0" value="89"></td>
+                    <td>95</td>
+                    <td>94</td>
+                    <td>93</td>
+                    <td>92</td>
+                </tr>
+                <tr>
+                    <td>Florence Mach</td>
+                    <td>100</td>
+                    <td>99</td>
+                    <td>98</td>
+                    <td>97</td>
+                    <td>96</td>
+                    <td>95</td>
+                    <td>94</td>
+                    <td><input type="number" placeholder="0" value="87"></td>
+                    <td>92</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
