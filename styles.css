@@ -1,0 +1,14 @@
+
+body * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*makes items(divs/blocks) display in a row*/
+.wd-flex-row-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.wd-navbar-style{
+    background-color: #000000;
+}
