@@ -1,6 +1,7 @@
 
-body * {
+body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
 
 /*makes items(divs/blocks) display in a row*/
@@ -10,5 +11,37 @@ body * {
 }
 
 .wd-navbar-style{
-    background-color: #000000;
+    list-style-type: none;
+    font-size: 13px;
+    margin:0px;
+    padding:0;
+}
+
+.wd-navbar-style li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 75px;
+    height: 60px;
+    text-align: center;
+    background-color: black;
+}
+
+.wd-navbar-style a, i, span {
+    display: block;
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.wd-navbar-style .active{
+    background-color: white;
+    color: darkred;
+}
+
+.wd-logo{
+    width: 50px;
+    height: 40px;
+    margin: 5px;
 }
