@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-<h1>CS 4550 Homepage</h1>
-
-<div class = "wd-flex-row-container">
-    <div>
+<div class="d-flex flex-row">
+    <div class="p-0 wd-navbar-container">
         <ul class = "wd-navbar-style">
             <li>
                 <img class ="wd-logo" src="/images/northeastern_logo.png">
@@ -25,7 +23,7 @@
             <li><a href="#">
                 <i class="fa-solid fa-gauge" style ="color:darkred"></i>
                 <span>Dashboard</span></a></li>
-            <li><a href="#">
+            <li class="wd-active-nav"><a href="./Navigator/nav.html">
                 <i class="fa-solid fa-address-book" style ="color:darkred"></i>
                 <span>Courses</span></a></li>
             <li><a href="#">
@@ -48,15 +46,22 @@
                 <span>Help</span></a></li>
         </ul>
     </div>
-    <div>
-        <ul>
-            <li><a href="./home.html">Home</a></li>
+    <div  class="pd-0 d-flex flex-column">
+        <nav id="wd-breadcrumb" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+        </nav>
+        <div class="d-flex flex-row">
+        <ul class="wd-links">
+            <li class="wd-active-link"><a href="public/kanbas/home.html">Home</a></li>
             <li><a href="#">Modules</a></li>
             <li><a href="#">Piazza</a></li>
             <li><a href="#">Zoom Meetings</a></li>
-            <li><a href="./assignments/index.html">Assignments</a></li>
+            <li><a href="/public/kanbas/assignments/index.html">Assignments</a></li>
             <li><a href="#">Quizzes</a></li>
-            <li><a href="./grades.html">Grades</a></li>
+            <li><a href="public/kanbas/grades.html">Grades</a></li>
             <li><a href="#">People</a></li>
             <li><a href="#">Panopto Video</a></li>
             <li><a href="#">Discussions</a></li>
@@ -69,62 +74,86 @@
             <li><a href="#">Syllabus</a></li>
             <li><a href="#">Settings</a></li>
         </ul>
-    </div>
-    <div>
-        <!-- navigation buttons -->
-        <button type="button">Collapse All</button>
-        <button type="button">View Progress</button>
-        <select id="publish">
-            <option>Publish All</option>
-            <option>Publish All modules and items</option>
-            <option>Publish modules only</option>
-        </select>
 
-        </hr>
+    <div id="wd-modules" class="p-2">
+        <!-- navigation buttons -->
+        <div class="d-flex flex-column">
+            <div>
+                <button class= "top-button float-end btn btn-danger" type="button">+ Module</button>
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        Publish All
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Publish All</a></li>
+                        <li><a class="dropdown-item" href="#">Publish All modules and items</a></li>
+                        <li><a class="dropdown-item" href="#">Publish modules only</a></li>
+                    </ul>
+                </div>
+
+
+                <button class="top-button float-end btn btn-secondary" type="button">View Progress</button>
+                <button class="top-button float-end btn btn-secondary" type="button">Collapse All</button>
+             </div>
+
         <!-- modules -->
-        <ul>
-            <li>Week 0 - INTRO</li>
-            <ul>
-                <li>LEARNING OBJECTIVES</li>
-                <ul>
-                    <li>Introduction to the course</li>
-                    <li>Learn what is Web Development</li>
-                    <li>Creating a development environment</li>
-                    <li>Creating a Web Application</li>
-                    <li>Getting started with the 1st assignment</li>
-                </ul>
-                <li>READING</li>
-                <ul>
-                    <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                    <li>Full Stack Develop - Chapter 2 - Creating User Interfaces With HTML</li>
-                </ul>
-                <li>SLIDES</li>
-                <ul>
-                    <li><a href="#">Introduction to Web Development Links to an external
-                        site</a></li>
-                    <li><a href="#">Creating an HTTP server with Node.js Links to an external
-                        site</a></li>
-                    <li><a href="#">Creating a React Application Links to an external site</a>
-                    </li>
-                </ul>
-            </ul>
-            <li> 1 - HTML</li>
-            <ul>
-                <li>LEARNING OBJECTIVES</li>
-                <ul>
-                    <li>Learn how to create user interfaces with HTML</li>
-                    <li>Keep working on assignment 1</li>
-                    <li>Deploy the assignment to Netlify</li>
-                </ul>
-                <li>READING</li>
-                <ul>
-                    <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                    <li>Full Stack Develop - Chapter 2 - Creating User Interfaces With HTML</li>
-                </ul>
-            </ul>
-        </ul>
+        <div class="list-group m-2">
+            <li
+                    class="list-group-item list-group-item-secondary"><span class="fw-medium">Week 0 -
+                INTRO</span></li>
+                <li class = "list-group-item list-group-item-action">LEARNING OBJECTIVES</li>
+                    <li class = "list-group-item list-group-item-action"><span
+                            class="ms-5 fw-medium">Introduction to the</span> course</li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5 fw-medium">Learn what is Web Development</span></li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5 fw-medium">Creating a development environment</span></li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5 fw-medium">Creating a Web Application</span></li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5 fw-medium">Getting started with the 1st assignment</span></li>
+                <li class = "list-group-item list-group-item-action"><span class="fw-medium">
+                    READING</span></li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5 fw-medium">Full Stack Developer - Chapter 1 -
+                            Introduction</span></li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5 text-nowrap fw-medium">Full Stack Developer - Chapter 2 - Creating
+                            User Interfaces With HTML</span></li>
+                <li class = "list-group-item list-group-item-action"> <span class="fw-medium">
+                    SLIDES</span></li>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <span class="ms-5 fw-medium">Introduction to Web Development Links to an external
+                            site</span></a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <span class="ms-5 fw-medium">Creating an HTTP server with Node.js Links to an
+                            external
+                            site</span></a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <span class="ms-5 fw-medium">Creating a React Application Links to an external site
+                        </span></a>
+        </div>
+            <div class="list-group m-2">
+            <li class = "list-group-item list-group-item-secondary"> 1 - HTML</li>
+                <li class = "list-group-item list-group-item-action">LEARNING OBJECTIVES</li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5">Learn how to create user interfaces with HTML</span></li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5">Keep working on assignment 1</span></li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5">Deploy the assignment to Netlify</span></li>
+                <li class = "list-group-item list-group-item-action">READING</li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5">Full Stack Developer - Chapter 1 - Introduction</span></li>
+                    <li class = "list-group-item list-group-item-action">
+                        <span class="ms-5">Full Stack Develop - Chapter 2 - Creating User
+                            Interfaces With HTML</span></li>
+            </div>
+        </div>
     </div>
-    <div>
+    <div class="p-2">
         <!-- course status -->
         <h2>Course Status</h2>
         <button>Unpublish</button>
@@ -147,6 +176,8 @@
             <li><a href="#">Lecture CS5610 SP23 Sep 11 at 6pm</a></li>
 
         </ul>
+</div>
+        </div>
     </div>
 </div>
 
