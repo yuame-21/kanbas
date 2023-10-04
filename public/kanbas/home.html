@@ -24,7 +24,7 @@
                     <span>Account</span>
                 </a>
             </li>
-            <li><a href="#">
+            <li><a href="./dashboard.html">
                 <i class="fa-solid fa-gauge" style ="color:darkred"></i>
                 <span>Dashboard</span></a></li>
             <li class="wd-active-nav"><a href="./Navigator/nav.html">
@@ -50,22 +50,106 @@
                 <span>Help</span></a></li>
         </ul>
     </div>
+
     <div  class="pd-0 d-flex flex-column">
-        <nav id="wd-breadcrumb" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <div id="wd-top-nav" class="d-flex flex-row justify-content-between d-md-none">
+            <!--sandwich-->
+            <p class="d-inline-flex gap-1">
+                <a class="btn btn-dark" data-bs-toggle="collapse" href="#sandwich" role="button"
+                   aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </p>
+            <div class="collapse" id="sandwich">
+                <div class="card card-body" >
+                    <ul id="wd-collapse-list" class="wd-navbar-style" >
+                        <li>
+                            <a href="./Navigator/nav2.html">
+                                <i class="fas fa-user" style="color: darkred"></i>
+                                <span>Account</span>
+                            </a>
+                        </li>
+                        <li><a href="./dashboard.html">
+                            <i class="fa-solid fa-gauge" style ="color:darkred"></i>
+                            <span>Dashboard</span></a></li>
+                        <li><a href="./Navigator/nav.html">
+                            <i class="fa-solid fa-address-book" style ="color:darkred"></i>
+                            <span>Courses</span></a></li>
+                        <li><a href="#">
+                            <i class="fa-solid fa-calendar-days" style ="color:darkred"></i>
+                            <span>Calendar</span></a></li>
+                        <li><a href="#">
+                            <i class="fa-solid fa-inbox" style ="color:darkred"></i>
+                            <span>Inbox</span></a></li>
+                        <li><a href="#">
+                            <i class="fa-regular fa-clock" style ="color:darkred"></i>
+                            <span>History</span></a></li>
+                        <li><a href="#">
+                            <i class="fa-solid fa-tv" style ="color:darkred"></i>
+                            <span>Studio</span></a></li>
+                        <li><a href="#">
+                            <i class="fa-solid fa-arrow-right-from-bracket" style ="color:darkred"></i>
+                            <span>Commons</span></a></li>
+                        <li><a href="#">
+                            <i class="fa-regular fa-circle-question" style ="color:darkred"></i>
+                            <span>Help</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- breadcrumb-->
+            <nav id="wd-breadcrumb1" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+            <!-- chevron -->
+            <p class="d-inline-flex gap-1">
+            <a class="btn btn-dark" data-bs-toggle="collapse" href="#chevron" role="button"
+               aria-expanded="false" aria-controls="collapseExample">
+                <i class="fa-solid fa-chevron-down"></i></a>
+            </p>
+            <div class="collapse" id="chevron">
+                <div class="card card-body">
+                    <ul id="wd-chevron-links" class="wd-links">
+                        <li class="m-0 p-0"><a href="/public/kanbas/home.html">Home</a></li>
+                        <li class="m-0 p-0"><a href="#">Modules</a></li>
+                        <li class="m-0 p-0"><a href="#">Piazza</a></li>
+                        <li class="m-0 p-0"><a href="#">Zoom Meetings</a></li>
+                        <li class="m-0 p-0"><a href="/public/kanbas/assignments/index.html">Assignments</a></li>
+                        <li class="m-0 p-0"><a href="#">Quizzes</a></li>
+                        <li class="m-0 p-0"><a href="/public/kanbas/grades.html">Grades</a></li>
+                        <li class="m-0 p-0"><a href="#">People</a></li>
+                        <li class="m-0 p-0"><a href="#">Panopto Video</a></li>
+                        <li class="m-0 p-0"><a href="#">Discussions</a></li>
+                        <li class="m-0 p-0"><a href="#">Announcements</a></li>
+                        <li class="m-0 p-0"><a href="#">Pages</a></li>
+                        <li class="m-0 p-0"><a href="#">Files</a></li>
+                        <li class="m-0 p-0"><a href="#">Rubrics</a></li>
+                        <li class="m-0 p-0"><a href="#">Outcomes</a></li>
+                        <li class="m-0 p-0"><a href="#">Collaborations</a></li>
+                        <li class="m-0 p-0"><a href="#">Syllabus</a></li>
+                        <li class="m-0 p-0"><a href="#">Settings</a></li>
+                    </ul>            </div>
+            </div>
+        </div>
+        <nav class="d-none d-md-block" id="wd-breadcrumb" style="--bs-breadcrumb-divider: '>';"
+             aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Home</li>
             </ol>
         </nav>
+
         <div class="d-flex flex-row">
-        <ul class="wd-links d-none d-md-block">
-            <li class="wd-active-link"><a href="public/kanbas/home.html">Home</a></li>
+        <ul class="wd-links d-none d-lg-block">
+            <li class="wd-active-link"><a href="./home.html">Home</a></li>
             <li><a href="#">Modules</a></li>
             <li><a href="#">Piazza</a></li>
             <li><a href="#">Zoom Meetings</a></li>
-            <li><a href="/public/kanbas/assignments/index.html">Assignments</a></li>
+            <li><a href="./assignments/index.html">Assignments</a></li>
             <li><a href="#">Quizzes</a></li>
-            <li><a href="public/kanbas/grades.html">Grades</a></li>
+            <li><a href="./grades.html">Grades</a></li>
             <li><a href="#">People</a></li>
             <li><a href="#">Panopto Video</a></li>
             <li><a href="#">Discussions</a></li>

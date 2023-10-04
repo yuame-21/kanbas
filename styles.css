@@ -4,6 +4,15 @@ body {
     margin: 0px;
 }
 
+h1{
+    font-size: 32px;
+    font-weight: 0;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+
 a,
 .list-group a{
     text-decoration: none;
@@ -139,6 +148,10 @@ h2#wd-name{
     margin-bottom: 15px;
 }
 
+h2#wd-sub{
+    border-bottom: lightgrey solid 1px;
+}
+
 #wd-user-icon{
     margin: 20px;
     padding: 10px;
@@ -206,5 +219,37 @@ h3{
 }
 
 .wd-mod-wrap{
-    width: 450fpx
+    width: 450px;
+}
+
+#wd-top-nav{
+    background-color: black;
+    width:100%;
+}
+
+.wd-navbar-style#wd-collapse-list ,
+.wd-navbar-style#wd-collapse-list a,
+.wd-navbar-style#wd-collapse-list span,
+.wd-navbar-style#wd-collapse-list i{
+    color: darkred;
+    background-color: white;
+}
+
+.wd-flex-card {
+    width: 250px;
+    box-sizing: border-box;
+    margin: 30px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+/*
+.wd-card-container{
+    width: 1240px;
+    margin: auto;
+    box-sizing: border-box;
+}
+*/
+
+.wd-small-text{
+    font-size: 11px;
 }
