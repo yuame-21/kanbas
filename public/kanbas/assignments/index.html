@@ -3,186 +3,409 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignments Scree</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="../../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<table>
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/public/kanbas/nav2.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="/public/kanbas/nav.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <ul>
-                <li><a href="/public/kanbas/home.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="index.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/public/kanbas/grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
-        </td>
-        <td>
+
+<div class="d-flex flex-row">
+<div class="p-0 wd-navbar-container d-none d-md-block">
+    <ul class = "wd-navbar-style">
+        <li>
+            <img class ="wd-logo" src="/images/northeastern_logo.png">
+        </li>
+        <li >
+            <a href="../Navigator/nav2.html">
+                <i class="fas fa-user" style="color: white"></i>
+                <span>Account</span>
+            </a>
+        </li>
+        <li><a href="../dashboard.html">
+            <i class="fa-solid fa-gauge" style ="color:darkred"></i>
+            <span>Dashboard</span></a></li>
+        <li class="wd-active-nav"><a href="../Navigator/nav.html">
+            <i class="fa-solid fa-address-book" style ="color:darkred"></i>
+            <span>Courses</span></a></li>
+        <li><a href="#">
+            <i class="fa-solid fa-calendar-days" style ="color:darkred"></i>
+            <span>Calendar</span></a></li>
+        <li><a href="#">
+            <i class="fa-solid fa-inbox" style ="color:darkred"></i>
+            <span>Inbox</span></a></li>
+        <li><a href="#">
+            <i class="fa-regular fa-clock" style ="color:darkred"></i>
+            <span>History</span></a></li>
+        <li><a href="#">
+            <i class="fa-solid fa-tv" style ="color:darkred"></i>
+            <span>Studio</span></a></li>
+        <li><a href="#">
+            <i class="fa-solid fa-arrow-right-from-bracket" style ="color:darkred"></i>
+            <span>Commons</span></a></li>
+        <li><a href="#">
+            <i class="fa-regular fa-circle-question" style ="color:darkred"></i>
+            <span>Help</span></a></li>
+    </ul>
+</div>
+    <div class="d-flex flex-column">
+        <nav id="wd-breadcrumb" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+            </ol>
+        </nav>
+    <div class="d-flex flex-row">
+    <ul class="wd-links d-none d-lg-block">
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="#">Modules</a></li>
+        <li><a href="#">Piazza</a></li>
+        <li><a href="#">Zoom Meetings</a></li>
+        <li class="wd-active-link"><a href="./index.html">Assignments</a></li>
+        <li><a href="#">Quizzes</a></li>
+        <li><a href="../grades.html">Grades</a></li>
+        <li><a href="#">People</a></li>
+        <li><a href="#">Panopto Video</a></li>
+        <li><a href="#">Discussions</a></li>
+        <li><a href="#">Announcements</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Files</a></li>
+        <li><a href="#">Rubrics</a></li>
+        <li><a href="#">Outcomes</a></li>
+        <li><a href="#">Collaborations</a></li>
+        <li><a href="#">Syllabus</a></li>
+        <li><a href="#">Settings</a></li>
+    </ul>
+
+<div class="d-flex flex-column">
             <!-- Assignment buttons -->
+    <div>
+        <div class="float-start p-2 m-2">
             <input placeholder="Search for Assignments">
-            <button>Group</button>
-            <button>Assignment</button>
-            <select>
-                <option>Edit Assignment Dates</option>
-            </select>
-            <!-- Assignment list-->
-            <table>
-                <tr>
-                    <td>
-            <h2>Assignments 40% of Total</h2>
-                    </td>
-                    <td>
-            <select>
-                <option>Edit</option>
-                <option>Speed Grader</option>
-                <option>Duplicate</option>
-                <option>Delete</option>
-                <option>Move to...</option>
-                <option>Send to...</option>
-                <option>Copy to...</option>
-                <option>Share to Commons</option>
-            </select>
-                    </td>
-                </tr>
-            </table>
-            <ul>
-                <li><a href="a-editor.html">A1 - ENV + HTML</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="public/kanbas/assignments/a-editor.html">A2 - CSS + BOOTSTRAP</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="public/kanbas/assignments/a-editor.html">A3 - JS + REACT</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="public/kanbas/assignments/a-editor.html">A4 - STATE + REDUX</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="a-editor.html">A5 - NODE + SESSION</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="a-editor.html">A6 - MONGO + MONGOOSE</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
+        </div>
+        <div class="dropdown float-end p-2 m-2 ms-0">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Edit Assignment Dates
+                </a></li>
             </ul>
+        </div>
+        <div class="float-end p-2 m-2">
+            <button class="btn btn-secondary"><i class="fa-solid fa-plus"></i>Group</button>
+            <button class="btn btn-danger"><i class="fa-solid fa-plus"></i>
+                Assignment</button>
+        </div>
+
+    </div>
+
+
+    <div class="wd-assignment-mod">
+            <!-- Assignment list-->
+        <div class="list-group m-2">
+            <li class="p-1 list-group-item list-group-item-secondary align-items-center ">
+                <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                <span class="text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                    Assignments</span>
+                <i class="m-2 fa-solid fa-ellipsis-vertical float-end" style="color: grey"></i>
+                <i class="m-2 fa-solid fa-plus float-end" style="color: grey"></i>
+                <div class="p-1 border border-2 border-secondary rounded-5 float-end">40%
+                            of Total</div>
+            </li>
+
+                <li class
+                            ="p-2 border-start border-success border-5 list-group-item list-group-item-action">
+                    <span>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                        <span
+                                class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">A1 - ENV + HTML</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                        <div class="float-end">
+                    <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                    <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                        </div>
+                    </span>
+                </li>
+
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">A2 - CSS + BOOTSTRAP</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">A3 - JS + REACT</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">A4 - STATE + REDUX</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">A5 - NODE + SESSION</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">A6 - MONGO + MONGOOSE</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+
+
+        </div>
 
             <!-- Quiz list-->
-            <table>
-                <tr>
-                    <td>
-            <h2>Quizzes 10% of Total</h2>
-                    </td>
-                    <td>
-            <select>
-                <option>Edit</option>
-                <option>Speed Grader</option>
-                <option>Duplicate</option>
-                <option>Delete</option>
-                <option>Move to...</option>
-                <option>Send to...</option>
-                <option>Copy to...</option>
-                <option>Share to Commons</option>
-            </select>
-                    </td>
-                </tr>
-            </table>
+        <div class="list-group m-2">
+            <li class="p-1 list-group-item list-group-item-secondary align-items-center ">
+                <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                <i class="m-2 fa-solid fa-ellipsis-vertical float-end" style="color: grey"></i>
+                <i class="m-2 fa-solid fa-plus float-end" style="color: grey"></i>
+                <span class="text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                    Quizzes</span>
+                <div class="p-1 border border-2 border-secondary rounded-5 float-end"> 10% of
+                    Total</div>
+            </li>
 
-            <ul>
-                <li><a href="#">Q1 - HTML</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="#">Q2 - CSS</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="#">Q3 - JS,ES6</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="#">Q4 - NODE</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="#">Q5 - MONGO</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-            </ul>
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">Q1 - HTML</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">Q2 - CSS</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">Q3 - JS,ES6</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">Q4 - NODE</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">Q5 - MONGO</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+        </div>
 
             <!-- Exams list-->
-            <table>
-                <tr>
-                    <td>
-            <h2>Exams 20% of Total</h2>
-                    </td>
-                    <td>
-            <select>
-                <option>Edit</option>
-                <option>Speed Grader</option>
-                <option>Duplicate</option>
-                <option>Delete</option>
-                <option>Move to...</option>
-                <option>Send to...</option>
-                <option>Copy to...</option>
-                <option>Share to Commons</option>
-            </select>
-                    </td>
-                </tr>
-            </table>
-            <ul>
-                <li><a href="#">Midterm</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-                <li><a href="#">Final</a>
-                    <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                </li>
-            </ul>
+        <div class="list-group m-2">
+            <li class="p-1 list-group-item list-group-item-secondary align-items-center ">
+                <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+
+                <span class="text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                    Exams</span>
+                <i class="m-2 fa-solid fa-ellipsis-vertical float-end" style="color: grey"></i>
+                <i class="m-2 fa-solid fa-plus float-end" style="color: grey"></i>
+
+                <div class="p-1 border border-2 border-secondary rounded-5 float-end"> 20% of Total</div>
+            </li>
+
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">Midterm</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">Final</a>
+                            <div class="fw-light"> <a href="#">Multiple Modules</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+
+        </div>
             <!-- Project list-->
-            <table>
-                <tr>
-                    <td><h2>Project 30% of Total</h2></td>
-                    <td>
-                        <select>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move to...</option>
-                            <option>Send to...</option>
-                            <option>Copy to...</option>
-                            <option>Share to Commons</option>
-                        </select>
-                    </td>
-                </tr>
-                <table>
-                    <ul>
-                        <li><a href="#">Project</a>
-                            <div><a href="#">Multiple Modules</a>| Not available yet</div>
-                        </li>
-                    </ul>
-                    </td>
-                    </tr>
-                </table>
+        <div class="list-group m-2">
+            <li class="p-1 list-group-item list-group-item-secondary align-items-center ">
+                <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                <span class="text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                    Project</span>
+                <i class="m-2 fa-solid fa-ellipsis-vertical float-end" style="color: grey"></i>
+                <i class="m-2 fa-solid fa-plus float-end" style="color: grey"></i>
+
+                <div class="p-1 border border-2 border-secondary rounded-5 float-end"> 30% of Total</div>
+
+            </li>
+            <li class =
+                        "border-start border-success border-5 p-2 list-group-item list-group-item-action align-items-center">
+                <div>
+                    <i class="m-2 fa-solid fa-ellipsis-vertical float-start" style="color: grey"></i>
+                    <i class="m-2 fa-regular fa-pen-to-square" style="color: forestgreen"></i>
+                    <span
+                            class="p-1 text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold position-absolute top-50 translate-middle-y">
+                            <a href="a-editor.html">Final</a>
+                            <div class="fw-light"> <a href="#">Project</a>| Not available
+                                yet</div>
+                        </span>
+                    <div class="float-end">
+                        <i class="m-2 fa-solid fa-ellipsis-vertical" style="color: grey"></i>
+                        <i class="m-2 fa-solid fa-circle-check" style="color: forestgreen"></i>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
 </body>
 </html>

@@ -49,6 +49,7 @@ a,
     color:white;
 }
 
+
 #edit-prof{
     margin-top: 50px;
 }
@@ -252,4 +253,12 @@ h3{
 
 .wd-small-text{
     font-size: 11px;
+}
+
+.wd-assignment-mod{
+    width: 1000px;
+}
+
+.border-end{
+    border-color: forestgreen;
 }
