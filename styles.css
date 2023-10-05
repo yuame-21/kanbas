@@ -262,3 +262,7 @@ h3{
 .border-end{
     border-color: forestgreen;
 }
+
+.wd-a-editor{
+    width: 900px;
+}

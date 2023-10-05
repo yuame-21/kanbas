@@ -3,32 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="../../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<table>
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/public/kanbas/nav2.html">Account</a></li>
-                <li><a href="../dashboard.html">Dashboard</a></li>
-                <li><a href="/public/kanbas/nav.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <ul>
-                <li><a href="/public/kanbas/home.html">Home</a></li>
+
+<div class="d-flex flex-row">
+    <div class="p-0 wd-navbar-container d-none d-md-block">
+        <ul class = "wd-navbar-style">
+            <li>
+                <img class ="wd-logo" src="/images/northeastern_logo.png">
+            </li>
+            <li >
+                <a href="../Navigator/nav2.html">
+                    <i class="fas fa-user" style="color: white"></i>
+                    <span>Account</span>
+                </a>
+            </li>
+            <li><a href="../dashboard.html">
+                <i class="fa-solid fa-gauge" style ="color:darkred"></i>
+                <span>Dashboard</span></a></li>
+            <li class="wd-active-nav"><a href="../Navigator/nav.html">
+                <i class="fa-solid fa-address-book" style ="color:darkred"></i>
+                <span>Courses</span></a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-calendar-days" style ="color:darkred"></i>
+                <span>Calendar</span></a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-inbox" style ="color:darkred"></i>
+                <span>Inbox</span></a></li>
+            <li><a href="#">
+                <i class="fa-regular fa-clock" style ="color:darkred"></i>
+                <span>History</span></a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-tv" style ="color:darkred"></i>
+                <span>Studio</span></a></li>
+            <li><a href="#">
+                <i class="fa-solid fa-arrow-right-from-bracket" style ="color:darkred"></i>
+                <span>Commons</span></a></li>
+            <li><a href="#">
+                <i class="fa-regular fa-circle-question" style ="color:darkred"></i>
+                <span>Help</span></a></li>
+        </ul>
+    </div>
+
+    <div class="d-flex flex-column">
+        <nav id="wd-breadcrumb" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                <li class="breadcrumb-item active" aria-current="page">A1 - ENV + HTML</li>
+            </ol>
+        </nav>
+        <div class="d-flex flex-row">
+            <ul class="wd-links d-none d-lg-block">
+                <li><a href="../home.html">Home</a></li>
                 <li><a href="#">Modules</a></li>
                 <li><a href="#">Piazza</a></li>
                 <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="index.html">Assignments</a></li>
+                <li class="wd-active-link"><a href="./index.html">Assignments</a></li>
                 <li><a href="#">Quizzes</a></li>
-                <li><a href="/public/kanbas/grades.html">Grades</a></li>
+                <li><a href="../grades.html">Grades</a></li>
                 <li><a href="#">People</a></li>
                 <li><a href="#">Panopto Video</a></li>
                 <li><a href="#">Discussions</a></li>
@@ -41,91 +78,110 @@
                 <li><a href="#">Syllabus</a></li>
                 <li><a href="#">Settings</a></li>
             </ul>
-        </td>
 
-        <td>
         <!-- Assignment editor -->
-        <select>
-            <option>SpeedGrader</option>
-        </select>
 
-        <h2>Assigment Name</h2>
-<input placeholder="Assignment Name" value="A1 - ENV + HTML">
-            <br></br>
-            <form id="assignment-descr">
-                <textarea placeholder="Assignment Description" rows="4" cols="15">
-                    This is the assignment description.
-                </textarea>
-            </form>
+<div class="row wd-a-editor">
 
-        <div>Points</div>
-        <input placeholder="100" value="100">
-            <br></br>
-        <div>Assignment Group</div>
-        <select>
-            <option>ASSIGNMENTS</option>
-        </select>
-            <br></br>
-        <div>Display Grade as</div>
-        <select>
-            <option>Percentage</option>
-        </select>
-            <br></br>
-        <div>Submission Type</div>
-        <select>
-            <option>Online</option>
-        </select>
-            <br></br>
+    <div class="col-8 mb-3">
+        <label for="assignment-name" class="form-label">Assigment Name</label>
+        <input type="email" class="form-control" id="assignment-name" placeholder="A1 - ENV + HTML">
+    </div>
+    <div class="col-8 mb-3">
+        <textarea class="form-control" id="assignment-descr" rows="4">This is the assignment
+            description.</textarea>
+    </div>
+    <div class="col-8 row g-3 align-items-center justify-content-center">
+        <div class="col-auto">
+            <label for="points" class="col-form-label">Points</label>
+        </div>
+        <div class="col-auto">
+            <input type="number" id="points" class="form-control">
+        </div>
+    </div>
+    <div class="col-8 row g-3 align-items-center justify-content-center">
 
-        <div>Online Entry Option</div>
-            <input type="checkbox" value="Text Entry" name="check-entry" id="entry-text">
-            <label for="entry-text">Text Entry</label> <br/>
-            <input type="checkbox" value="Website URL" name="check-entry" id="entry-web">
-            <label for="entry-web">Website URL</label> <br/>
-            <input type="checkbox" value="Media Recordings" name="check-entry" id="entry-media">
-            <label for="entry-media">Media Recordings</label> <br/>
-            <input type="checkbox" value="Student Annotation" name="check-entry" id="entry-stu">
-            <label for="entry-stu">Student Annotation</label> <br/>
-            <input type="checkbox" value="File Uploads" name="check-entry" id="entry-file">
-            <label for="entry-file">File Uploads</label><br/>
+    <div class="col-auto">
+            <label for="a-group" class="col-form-label">Assignment Group</label>
+        </div>
+        <div class="col-auto">
+            <input type="number" id="a-group" class="form-control">
+        </div>
+    </div>
 
-            <br></br>
+    <div class="col-8 row g-3 align-items-center justify-content-center">
 
-            <div>Submission Attempts</div>
-            <select>
-                <option>Unlimited</option>
-            </select>
+    <div class="col-auto">
+            <label for="d-grade" class="col-form-label">Display Grade as</label>
+        </div>
+        <div class="col-auto">
 
-            <div>Plagiarism Review</div>
-            <select>
-                <option>None</option>
-            </select>
-            <br></br>
+                <div id="d-grade" class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Percentage
+                    </button>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </div>
+        </div>
+        </div>
 
-            <div> Peer Reviews</div>
-            <input type="checkbox" value="PEER" name="peercheck" id="check-peer">
-            <label for="check-peer">Require Peer Reviews</label> <br/>
+    <div class="col-8 row g-3 align-items-center justify-content-center">
+        <div class="col-auto">
+            <label for="entry-op" class="col-form-label">Submission Type</label>
+        </div>
+        <div class="col-auto">
+            <div id="entry-op" class="border border-3 p-3">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Online
+                    </button>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </div>
+                <input type="checkbox" value="Text Entry" name="check-entry" id="entry-text">
+                <label for="entry-text">Text Entry</label> <br/>
+                <input type="checkbox" value="Website URL" name="check-entry" id="entry-web">
+                <label for="entry-web">Website URL</label> <br/>
+                <input type="checkbox" value="Media Recordings" name="check-entry" id="entry-media">
+                <label for="entry-media">Media Recordings</label> <br/>
+                <input type="checkbox" value="Student Annotation" name="check-entry" id="entry-stu">
+                <label for="entry-stu">Student Annotation</label> <br/>
+                <input type="checkbox" value="File Uploads" name="check-entry" id="entry-file">
+                <label for="entry-file">File Uploads</label>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-8 row g-3 align-items-center justify-content-center">
+        <div class="col-auto">
+            <label for="assign-to" class="col-form-label">Assign to</label>
+        </div>
+        <div class="col-auto">
+            <div id="assign-to" class="border border-3 p-3">
+                <label for="a-people" class="form-label fw-semibold">Assign to</label>
+                <input id="a-people"class="form-control" placeholder="Assign" value="Everyone"/>
 
-            <div>Assign to</div>
-            <input placeholder="Assign" value="Everyone"/>
-            <br></br>
+                <label for="due" class="form-label fw-semibold">Due</label>
+                <input id="due"class="form-control" type="date" value="2021-01-01"/>
 
-            <div>Due</div>
-            <input type="date" value="2021-01-01"/>
-            <br></br>
+                <label for="a-from" class="form-label fw-semibold">Available from</label>
+                <input id="a-from"class="form-control" type="date" value="2021-01-01"/>
 
-            <div>Available from</div>
-            <input type="date" value="2021-01-01"/>
-            <br></br>
+                <label for="a-until" class="form-label fw-semibold">Until</label>
+                <input id="a-until"class="form-control" type="date" value="2021-01-01"/>
 
-            <div>Until</div>
-<input type="date" value="2021-01-01"/>
-            <br></br>
-            <button><a href="index.html">Cancel</a></button>
-            <button><a href="index.html">Save</a></button>
-        </td>
-    </tr>
-</table>
+            </div>
+        </div>
+    </div>
+<div class="d-flex flex-row justify-content-end">
+                 <button class="btn btn-secondary"><a href="index.html">Cancel</a></button>
+            <button class="btn btn-danger"><a href="index.html">Save</a></button>
+</div>
+        </div>
+        </div>
+    </div>
+</div>
 </body>
+
 </html>
