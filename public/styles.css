@@ -267,3 +267,7 @@ h3{
     width: 900px;
 }
 
+.border-start{
+    border-left-style: solid;
+    border-color: forestgreen;
+}
