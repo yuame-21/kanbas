@@ -1,12 +1,13 @@
 import React from "react";
+import ConditionalOutputInLine from "./ConditionalOutputInLine";
+
 import ConditionalOutputIfElse
     from "./ConditionalOutputIfElse";
-import ConditionalOutputInline from "./ConditionalOutputInline";
 const ConditionalOutput = () => {
     return(
         <>
             <ConditionalOutputIfElse/>
-            <ConditionalOutputInline/>
+            <ConditionalOutputInLine/>
         </>
     );
 };

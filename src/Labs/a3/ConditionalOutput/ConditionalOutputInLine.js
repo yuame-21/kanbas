@@ -1,4 +1,4 @@
-const ConditionalOutputInline = () => {
+const ConditionalOutputInLine = () => {
     const loggedIn = false;
     return (
         <>
@@ -7,5 +7,4 @@ const ConditionalOutputInline = () => {
         </>
     );
 };
-
-export default ConditionalOutputInline;
+export default ConditionalOutputInLine;
