@@ -20,26 +20,27 @@ function KanbasNavigation() {
     return (
         <div className="wd-navbar-container">
         <ul className="wd-navbar-style">
-            <li className="list-group-item">
-                <img class="wd-logo" src={NEULogo} alt="Northeastern Logo"/>
+            <li className="list-group-item wd-logo-list">
+                <img className="wd-logo" src={NEULogo} alt="Northeastern Logo"/>
             </li>
             {links.map((link, index) => (
                 <Link
                     key={index}
                     to={`/Kanbas/${link.name}`}
                     className={`list-group-item ${pathname.includes(link.name) && "active"}`}>
-                    {link.name}
                     <div>
                     {link.iconClass === "FaUserLarge" && <FaUserLarge style={{}}/>}
-                    {link.iconClass === "FaGauge" && <FaGauge/>}
-                    {link.iconClass === "FaAddressBook" && <FaAddressBook/>}
-                    {link.iconClass === "FaCalendarDays" && <FaCalendarDays/>}
-                    {link.iconClass === "FaInbox" && <FaInbox/>}
-                    {link.iconClass === "FaClock" && <FaClock/>}
-                    {link.iconClass === "FaTv" && <FaTv/>}
-                    {link.iconClass === "FaArrowRightFromBracket" && <FaArrowRightFromBracket/>}
-                    {link.iconClass === "FaRegCircleQuestion" && <FaRegCircleQuestion/>}
+                        {link.iconClass === "FaGauge" && <FaGauge/>}
+                        {link.iconClass === "FaAddressBook" && <FaAddressBook/>}
+                        {link.iconClass === "FaCalendarDays" && <FaCalendarDays/>}
+                        {link.iconClass === "FaInbox" && <FaInbox/>}
+                        {link.iconClass === "FaClock" && <FaClock/>}
+                        {link.iconClass === "FaTv" && <FaTv/>}
+                        {link.iconClass === "FaArrowRightFromBracket" && <FaArrowRightFromBracket/>}
+                        {link.iconClass === "FaRegCircleQuestion" && <FaRegCircleQuestion/>}
                     </div>
+                        {link.name}
+
                 </Link>
 
             ))}

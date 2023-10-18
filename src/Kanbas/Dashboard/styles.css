@@ -1,0 +1,19 @@
+.wd-flex-card {
+    width: 250px;
+    box-sizing: border-box;
+    margin: 30px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding:0;
+}
+
+.wd-small-text{
+    font-size: 11px;
+}
+.wd-card-img-top{
+    width: 250px;
+    height: 175px;
+    object-fit: fill;
+    margin:0;
+    padding:0;
+}

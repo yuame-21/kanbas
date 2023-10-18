@@ -57,11 +57,23 @@
     color: darkred;
 }
 
+.wd-logo-list li:active,
+.wd-logo-list li:active a {
+    background-color: black;
+}
+
+
 .wd-logo{
-    width: 85px;
-    height: 85px;
+    width: 80px;
+    height: 80px;
     margin: 0;
 }
+
+.wd-logo-list{
+    width: 85px;
+    height: 85px;
+}
+
 
 .wd-links{
     list-style-type: none;

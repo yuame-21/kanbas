@@ -243,6 +243,7 @@ h3{
     margin: 30px;
     flex-grow: 0;
     flex-shrink: 0;
+    padding:0;
 }
 /*
 .wd-card-container{
