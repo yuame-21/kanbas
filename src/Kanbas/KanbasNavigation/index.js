@@ -20,14 +20,14 @@ function KanbasNavigation() {
     return (
         <div className="wd-navbar-container">
         <ul className="wd-navbar-style">
-            <li className="list-group-item wd-logo-list">
+            <li className="wd-list-group-item wd-logo-list">
                 <img className="wd-logo" src={NEULogo} alt="Northeastern Logo"/>
             </li>
             {links.map((link, index) => (
                 <Link
                     key={index}
                     to={`/Kanbas/${link.name}`}
-                    className={`list-group-item ${pathname.includes(link.name) && "active"}`}>
+                    className={`wd-list-group-item ${pathname.includes(link.name) && "active"}`}>
                     <div>
                     {link.iconClass === "FaUserLarge" && <FaUserLarge style={{}}/>}
                         {link.iconClass === "FaGauge" && <FaGauge/>}

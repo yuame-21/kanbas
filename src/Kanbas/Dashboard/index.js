@@ -8,10 +8,10 @@ function Dashboard() {
     return (
         <div className="pd-0 d-flex flex-column">
             <div>
-                <h1 id="wd-dash">Dashboard</h1>
+                <h1>Dashboard</h1>
                 <hr/>
             </div>
-            <div className="ms-3">
+            <div className="wd-margin-left">
             <div>
                 <h2 id="wd-sub">Published Courses ({courses.length})</h2>
                 <hr/>

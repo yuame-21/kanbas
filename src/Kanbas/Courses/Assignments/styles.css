@@ -1,0 +1,25 @@
+
+.wd-assignment-mod{
+    width: 1000px;
+}
+
+
+.wd-a-editor{
+    width: 900px;
+}
+
+.wd-border-left{
+    border-left-style: solid;
+    border-left-width: thick;
+    border-left-color: forestgreen;
+}
+
+.wd-a-list{
+    align-items: center;
+}
+
+.wd-pub{
+    color: forestgreen;
+    margin: 5px;
+}
+

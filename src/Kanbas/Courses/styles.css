@@ -1,0 +1,73 @@
+.wd-course-name{
+    color: darkred;
+    margin: 15px;
+}
+
+
+.wd-links{
+    list-style-type: none;
+    font-size: 16px;
+    margin:20px;
+    padding: 10px;
+    width: 190px;
+}
+
+.wd-links li{
+    padding: 15px;
+}
+
+
+.wd-links li:active a {
+    color: black;
+    border-left: black solid 2px;
+}
+
+.wd-active-link{
+    color: darkred;
+    padding: 8px;
+    text-align: left;
+    font-weight: 1000;
+
+}
+
+.wd-active-link.active{
+    color: black;
+    border-left: black solid 2px;
+}
+
+
+.wd-mod{
+    width: 40vw;
+    margin: 10px;
+}
+
+.wd-status{
+    width: 250px;
+    margin: 5px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.wd-button-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+}
+
+.wd-bread{
+    font-size: 20px;
+}
+
+.wd-todo ul,
+.wd-todo li{
+    list-style: none;
+    color: darkred;
+    margin:0;
+    padding:0;
+}
+
+.wd-todo p{
+    color:black;
+}
