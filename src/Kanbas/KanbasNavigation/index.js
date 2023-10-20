@@ -29,7 +29,7 @@ function KanbasNavigation() {
                     to={`/Kanbas/${link.name}`}
                     className={`pt-3 wd-list-group-item ${pathname.includes(link.name) && "active"}`}>
                     <div>
-                    {link.iconClass === "FaUserLarge" && <FaUserLarge style={{}}/>}
+                    {link.iconClass === "FaUserLarge" && <FaUserLarge />}
                         {link.iconClass === "FaGauge" && <FaGauge/>}
                         {link.iconClass === "FaAddressBook" && <FaAddressBook/>}
                         {link.iconClass === "FaCalendarDays" && <FaCalendarDays/>}
