@@ -4,7 +4,6 @@ import '../styles.css';
 function Modules() {
     return (
         <div>
-
             <ModuleList />
         </div>
     );

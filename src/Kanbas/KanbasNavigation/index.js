@@ -27,7 +27,7 @@ function KanbasNavigation() {
                 <Link
                     key={index}
                     to={`/Kanbas/${link.name}`}
-                    className={`wd-list-group-item ${pathname.includes(link.name) && "active"}`}>
+                    className={`pt-3 wd-list-group-item ${pathname.includes(link.name) && "active"}`}>
                     <div>
                     {link.iconClass === "FaUserLarge" && <FaUserLarge style={{}}/>}
                         {link.iconClass === "FaGauge" && <FaGauge/>}

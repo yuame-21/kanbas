@@ -6,7 +6,7 @@
 
 .wd-links{
     list-style-type: none;
-    font-size: 16px;
+    font-size: 13px;
     margin:20px;
     padding: 10px;
     width: 190px;
@@ -39,6 +39,14 @@
 .wd-mod{
     width: 40vw;
     margin: 10px;
+}
+
+.wd-mod h3{
+    font-size: 17px;
+}
+
+.wd-mod p{
+    font-size: 13px;
 }
 
 .wd-status{

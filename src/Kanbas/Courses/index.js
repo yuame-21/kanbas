@@ -5,13 +5,12 @@ import CourseNavigation from "./CourseNavigation";
 import Modules from  "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
-import {FaGlasses, FaEllipsisVertical} from "react-icons/fa6";
+import {FaGlasses} from "react-icons/fa6";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
 
 function Courses() {
     const { courseId } = useParams();
-    const { assignmentId } = useParams();
     const course = db.courses.find((course) => course.id === courseId);
     const links = ["Home",
                    "Modules",
@@ -44,7 +43,6 @@ function Courses() {
                 <li className="breadcrumb-item"><a href="#">{course.name}</a></li>
                 <li className="breadcrumb-item active" aria-current="page">
                     {links.find(link => pathname.includes(link))}</li>
-
             </ol>
         </nav>
             <hr className="m-1"/>

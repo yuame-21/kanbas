@@ -15,8 +15,8 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
-    width: 85px;
-    height: 80px;
+    width: 80px;
+    height: 70px;
     text-align: center;
     background-color: black;
 }
@@ -27,16 +27,17 @@
     display: block;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .wd-list-group-item{
     padding: 5px;
-    width: 85px;
+    width: 80px;
     height: 70px;
     margin:0;
     text-align: center;
     background-color: black;
+
 }
 
 .wd-list-group-item.active{
@@ -64,14 +65,14 @@
 
 
 .wd-logo{
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     margin: 0;
 }
 
 .wd-logo-list{
-    width: 85px;
-    height: 85px;
+    width: 80px;
+    height: 80px;
 }
 
 
