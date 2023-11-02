@@ -79,3 +79,14 @@
 .wd-todo p{
     color:black;
 }
+
+.wd-btn{
+    font-size: 13px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.wd-form{
+    width: 300px;
+}
+

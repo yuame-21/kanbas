@@ -5,7 +5,6 @@ import Styles from "./Styles";
 import ConditionalOutput from "./ConditionalOutput/index";
 import TodoList from "./todos/TodoList";
 import { useSelector } from "react-redux";
-
 function Assignment3() {
     const { todos } = useSelector((state) => state.todosReducer);
 

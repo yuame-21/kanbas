@@ -1,12 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import '../styles.css';
 import {FaPlus, FaEllipsisVertical} from 'react-icons/fa6'
+import { useSelector, useDispatch } from "react-redux";
+import {
+    addModule,
+    deleteModule,
+    updateModule,
+    setModule,
+} from "./modulesReducer";
 
 function ModuleList() {
     const { courseId } = useParams();
-    const modules = db.modules;
+    const modules = useSelector((state) => state.modulesReducer.modules);
+    const module = useSelector((state) => state.modulesReducer.module);
+    const dispatch = useDispatch();
+
     return (
         <div className="d-flex flex-column">
 
@@ -25,17 +35,49 @@ function ModuleList() {
             <hr/>
 
     <div>
-            {
+        <div className="d-flex flex-row">
+                <div className="d-flex flex-column">
+                <input className="m-1 mt-0" value={module.name}
+                       onChange={(e) =>
+                           dispatch(setModule({ ...module, name: e.target.value }))}
+                />
+                <textarea className="m-1" value={module.description}
+                          onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
+                />
+                </div>
+            <div className="m-3 mt-0">
+            <button className="btn btn-success m-1 wd-btn"
+                    onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                Add</button>
+                <button className="btn btn-primary m-1 wd-btn"
+                        onClick={() => dispatch(updateModule(module))}>
+                    Update
+                </button>
 
-                modules
+            </div>
+        </div>
+            {modules
                     .filter((module) => module.course === courseId)
                     .map((module, index) => (
                         <li key={index}  id="wd-mod" className="wd-mod p-2 m-5 ms-0 me-0 list-group-item
                         list-group-item-secondary align-items-center ">
-                            <h3
+                            <div className="row justify-content-md-center">
+                            <div className="col-md-auto"><h3
                                  className="text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold">
                                  {module.name}</h3>
                             <p>{module.description}</p>
+                            </div>
+                            <div className="col">
+                                <button className="btn btn-success wd-btn float-end"
+                                        onClick={() => dispatch(setModule(module))}>
+                                    Edit
+                                </button>
+                            <button className="btn btn-danger wd-btn float-end"
+                                    onClick={() => dispatch(deleteModule(module.id))}>
+                                Delete
+                            </button>
+                            </div>
+                            </div>
 
                         </li>
                     ))
