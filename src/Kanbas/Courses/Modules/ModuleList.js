@@ -62,12 +62,12 @@ function ModuleList() {
                         <li key={index}  id="wd-mod" className="wd-mod p-2 m-5 ms-0 me-0 list-group-item
                         list-group-item-secondary align-items-center ">
                             <div className="row justify-content-md-center">
-                            <div className="col-md-auto"><h3
+                            <div className="col"><h3
                                  className="text-wrap wd-mod-wrap text-wrap wd-mod-wrap fw-semibold">
                                  {module.name}</h3>
                             <p>{module.description}</p>
                             </div>
-                            <div className="col">
+                            <div className="col-md-auto">
                                 <button className="btn btn-success wd-btn float-end"
                                         onClick={() => dispatch(setModule(module))}>
                                     Edit
