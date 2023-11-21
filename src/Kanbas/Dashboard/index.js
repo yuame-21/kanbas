@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import db from "../Database";
 import {FaPen} from "react-icons/fa6";
 import './styles.css';
 import {useState} from 'react';
@@ -40,13 +39,12 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
             <div className="container gx-0 d-flex flex-row flex-wrap">
             <div className="row">
                 {courses.map((course) => (
-
                     <div className="card wd-flex-card">
                         <img className="wd-card-img-top" src="../../Images/bluesquare.jpeg"
                              alt=""/>
                             <div className="card-body">
                                 <h5 className="card-title">
-                                    <Link key={course.id} to={`/Kanbas/Courses/${course.id}`} >
+                                    <Link key={course.id} to={`/Kanbas/Courses/${course.id.$oid}`} >
                                     {course.name}
                                 </Link>
                                 </h5>

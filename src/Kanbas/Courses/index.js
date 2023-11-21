@@ -7,11 +7,25 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import {FaGlasses} from "react-icons/fa6";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-
-function Courses({courses}) {
+function Courses() {
     const { courseId } = useParams();
-    const course = courses.find((course) => course.id === courseId);
+    const URL = "http://localhost:4000/api/courses";
+    const [course, setCourse] = useState({});
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
+
+
     const links = ["Home",
                    "Modules",
                    "Piazza",
