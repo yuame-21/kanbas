@@ -81,7 +81,7 @@ function ModuleList() {
                     onClick={handleAddModule}>
                 Add</button>
                 <button className="btn btn-primary m-1 wd-btn"
-                        onClick={() => handleUpdateModule(module.id)}>
+                        onClick={handleUpdateModule}>
                     Update
                 </button>
 
